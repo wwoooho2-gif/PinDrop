@@ -1,0 +1,12 @@
+{
+  "name": "pindrop-pinterest-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A local website for downloading images from public Pinterest pins",
+  "scripts": {
+    "start": "python3 pinterest-downloader/app.py",
+    "start:windows": "py -3 pinterest-downloader/app.py",
+    "test": "python3 -m unittest discover -s pinterest-downloader -v",
+    "test:windows": "py -3 -m unittest discover -s pinterest-downloader -v"
+  }
+}
