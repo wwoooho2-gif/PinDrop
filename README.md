@@ -17,12 +17,6 @@ npm install
 npm start
 ```
 
-Then open:
-
-```text
-http://127.0.0.1:8765
-```
-
 Paste one or more Pinterest pin links, one per line, and choose a download option:
 
 - Download to browser: saves the original media file
@@ -35,16 +29,3 @@ A single pin downloads as a file. Multiple pins are bundled into a ZIP.
 - The GIF conversion uses the first 15 seconds, up to 720px wide, at 25 fps.
 - FFmpeg must be installed and available in your `PATH`.
 - This app only supports public Pinterest pins.
-
-## Tests
-
-```sh
-npm test
-```
-
-Windows users can run:
-
-```sh
-npm run start:windows
-npm run test:windows
-```
