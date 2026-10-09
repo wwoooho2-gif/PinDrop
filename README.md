@@ -1,19 +1,14 @@
 # PinDrop
 
-PinDrop is a small local website for downloading images and videos from
-publicly accessible Pinterest pins.
+PinDrop is a simple local app for downloading public Pinterest pins.
 
 ## Requirements
 
-- Python 3.9 or newer
+- Python 3.9+
 - Node.js and npm
-- FFmpeg (only needed for **Download as GIF**)
+- FFmpeg (only needed for GIF downloads)
 
-PinDrop does not use any npm packages. `npm install` does not create a Python
-virtual environment; use your system Python, or create and activate your own
-environment if you prefer.
-
-## Run
+## Quick start
 
 From the project root:
 
@@ -22,20 +17,24 @@ npm install
 npm start
 ```
 
-PinDrop opens in your browser at <http://127.0.0.1:8765>. Paste one or more
-Pinterest pin links, one per line, then choose a download button:
+Then open:
 
-- **Download to browser** saves images/videos in their original media format.
-- **Download as GIF** converts video pins to GIF and downloads photos normally.
+```text
+http://127.0.0.1:8765
+```
 
-A single pin downloads directly as a file. Multiple pins are bundled into a ZIP.
-The pasted links clear after a successful download starts. Stop the server with
-Ctrl+C in the terminal.
+Paste one or more Pinterest pin links, one per line, and choose a download option:
 
-The GIF conversion uses the first 15 seconds, up to 720 pixels wide, at 25 fps,
-with a 100 MB output limit. FFmpeg must be installed and available on `PATH`.
+- Download to browser: saves the original media file
+- Download as GIF: converts videos to GIF and downloads photos normally
 
-On Windows, run `npm run start:windows` and `npm run test:windows`.
+A single pin downloads as a file. Multiple pins are bundled into a ZIP.
+
+## Notes
+
+- The GIF conversion uses the first 15 seconds, up to 720px wide, at 25 fps.
+- FFmpeg must be installed and available in your `PATH`.
+- This app only supports public Pinterest pins.
 
 ## Tests
 
@@ -43,8 +42,9 @@ On Windows, run `npm run start:windows` and `npm run test:windows`.
 npm test
 ```
 
-## Limitations
+Windows users can run:
 
-Only publicly accessible Pinterest pins are supported. PinDrop does not sign
-in, bypass access restrictions, or download private content. Please respect
-creators' rights and Pinterest's terms.
+```sh
+npm run start:windows
+npm run test:windows
+```
