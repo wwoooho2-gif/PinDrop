@@ -23,9 +23,3 @@ Paste one or more Pinterest pin links, one per line, and choose a download optio
 - Download as GIF: converts videos to GIF and downloads photos normally
 
 A single pin downloads as a file. Multiple pins are bundled into a ZIP.
-
-## Notes
-
-- The GIF conversion uses the first 15 seconds, up to 720px wide, at 25 fps.
-- FFmpeg must be installed and available in your `PATH`.
-- This app only supports public Pinterest pins.
